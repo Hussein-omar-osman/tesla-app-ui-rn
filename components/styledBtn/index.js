@@ -1,15 +1,18 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Pressable } from 'react-native';
 import styles from './styles';
 
-const StylesBtn = () => {
+const StylesBtn = ({ type, words, pressed }) => {
+  const backgroundColor = type === 'primary' ? '#171A20CC' : '#FFFFFFA6';
+  const color = type === 'primary' ? '#FFFFFF' : '#171A20';
   return (
-    <View style={styles.carContainer}>
-      <Text>StylesBtn</Text>
-      {/* <View style={styles.titles}>
-        <Text style={styles.title}>Model S</Text>
-        <Text style={styles.subTitle}>Starting from $69,000</Text>
-      </View> */}
+    <View style={styles.container}>
+      <Pressable
+        style={[styles.button, { backgroundColor: backgroundColor }]}
+        onPress={() => pressed()}
+      >
+        <Text style={[styles.text, { color: color }]}>{words}</Text>
+      </Pressable>
     </View>
   );
 };
