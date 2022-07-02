@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Pressable } from 'react-native';
+import { View, Text, Pressable, TouchableOpacity } from 'react-native';
 import styles from './styles';
 
 const StylesBtn = ({ type, words, pressed }) => {
@@ -7,12 +7,12 @@ const StylesBtn = ({ type, words, pressed }) => {
   const color = type === 'primary' ? '#FFFFFF' : '#171A20';
   return (
     <View style={styles.container}>
-      <Pressable
+      <TouchableOpacity
         style={[styles.button, { backgroundColor: backgroundColor }]}
         onPress={() => pressed()}
       >
         <Text style={[styles.text, { color: color }]}>{words}</Text>
-      </Pressable>
+      </TouchableOpacity>
     </View>
   );
 };
