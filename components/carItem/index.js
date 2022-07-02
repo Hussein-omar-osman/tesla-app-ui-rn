@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, ImageBackground } from 'react-native';
 import styles from './styles';
+import StyledBtn from '../styledBtn';
 
 const CarItem = () => {
   return (
@@ -13,6 +14,8 @@ const CarItem = () => {
         <Text style={styles.title}>Model S</Text>
         <Text style={styles.subTitle}>Starting from $69,000</Text>
       </View>
+
+      <StyledBtn />
     </View>
   );
 };
