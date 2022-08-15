@@ -19,3 +19,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+// Expo link
+// https://expo.dev/@hussein-omar/tesla-cars-RN?serviceType=classic&distribution=expo-go
